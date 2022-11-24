@@ -1,0 +1,39 @@
+.title {
+  margin-bottom: 15px;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stat-title {
+  font-size: 1.3rem;
+  color: #888;
+}
+
+.stat-num {
+  font-size: 1.5rem;
+}
+
+.title2 {
+  margin-bottom: 5px;
+  margin-top: 40px;
+}
+
+.link {
+  text-decoration: none;
+  color: #1674d9;
+}
+
+.show {
+  margin-bottom: 15px;
+}
