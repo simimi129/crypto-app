@@ -1,7 +1,7 @@
 window.env = {
   "ALLUSERSPROFILE": "C:\\ProgramData",
   "APPDATA": "C:\\Users\\simim\\AppData\\Roaming",
-  "CHROME_CRASHPAD_PIPE_NAME": "\\\\.\\pipe\\crashpad_1344_XXSXHVTXRUCKDYFB",
+  "CHROME_CRASHPAD_PIPE_NAME": "\\\\.\\pipe\\crashpad_7420_FPRSQGLLSGOKZLLQ",
   "COLOR": "1",
   "COLORTERM": "truecolor",
   "CommonProgramFiles": "C:\\Program Files\\Common Files",
@@ -71,7 +71,7 @@ window.env = {
   "SystemRoot": "C:\\WINDOWS",
   "TEMP": "C:\\Users\\simim\\AppData\\Local\\Temp",
   "TERM_PROGRAM": "vscode",
-  "TERM_PROGRAM_VERSION": "1.73.0",
+  "TERM_PROGRAM_VERSION": "1.73.1",
   "TMP": "C:\\Users\\simim\\AppData\\Local\\Temp",
   "USERDOMAIN": "LAPTOP-F6VHAEQA",
   "USERDOMAIN_ROAMINGPROFILE": "LAPTOP-F6VHAEQA",

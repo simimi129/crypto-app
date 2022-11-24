@@ -19,9 +19,9 @@ function News({ simplified }) {
   if (!cryptoNews?.value) return "Loading...";
 
   return (
-    <div className={classes["news-container"]}>
+    <>
       {!simplified && (
-        <div className="filter">
+        <div className={classes.filter}>
           <select
             placeholder="Select Crypto"
             onChange={({ target }) => setNewsCategory(target.value)}
@@ -35,44 +35,49 @@ function News({ simplified }) {
           </select>
         </div>
       )}
-      {cryptoNews?.value.map((news, i) => (
-        <div className={classes.card} key={i}>
-          <a
-            href={news.url}
-            target="_blank"
-            rel="noreferrer"
-            className={classes.link}
-          >
-            <div>
-              <div className={classes.title}>{news.name}</div>
-              <img
-                src={news?.image?.thumbnail?.contentUrl || demoImage}
-                alt="news"
-                className={classes.img}
-              />
-            </div>
-            <p>
-              {news.description > 100
-                ? `${news.description.substring(0, 100)}...`
-                : news.description}
-            </p>
-            <div>
-              <div className={classes.provider}>
+      <div className={classes["news-container"]}>
+        {cryptoNews?.value.map((news, i) => (
+          <div className={classes.card} key={i}>
+            <a
+              href={news.url}
+              target="_blank"
+              rel="noreferrer"
+              className={classes.link}
+            >
+              <div>
+                <div className={classes.title}>{news.name}</div>
                 <img
-                  src={
-                    news.provider[0]?.image?.thumbnail?.contentUrl || demoImage
-                  }
-                  alt="provider"
-                  className={classes["provider-icon"]}
+                  src={news?.image?.thumbnail?.contentUrl || demoImage}
+                  alt="news"
+                  className={classes.img}
                 />
-                <span>{news.provider[0]?.name}</span>
               </div>
-              <span>{moment(news.datePublished).startOf("ss").fromNow()}</span>
-            </div>
-          </a>
-        </div>
-      ))}
-    </div>
+              <p>
+                {news.description > 100
+                  ? `${news.description.substring(0, 100)}...`
+                  : news.description}
+              </p>
+              <div>
+                <div className={classes.provider}>
+                  <img
+                    src={
+                      news.provider[0]?.image?.thumbnail?.contentUrl ||
+                      demoImage
+                    }
+                    alt="provider"
+                    className={classes["provider-icon"]}
+                  />
+                  <span>{news.provider[0]?.name}</span>
+                </div>
+                <span>
+                  {moment(news.datePublished).startOf("ss").fromNow()}
+                </span>
+              </div>
+            </a>
+          </div>
+        ))}
+      </div>
+    </>
   );
 }
 

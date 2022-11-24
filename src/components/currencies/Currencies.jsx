@@ -23,7 +23,7 @@ function Currencies({ simplified }) {
   return (
     <>
       {!simplified && (
-        <div className="search">
+        <div className={classes.search}>
           <input
             type="text"
             placeholder="Search"

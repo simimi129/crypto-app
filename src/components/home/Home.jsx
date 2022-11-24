@@ -9,7 +9,6 @@ import News from "../news/News";
 function Home() {
   const { data, isFetching } = useGetCryptosQuery(10);
   const globalStats = data?.data?.stats;
-  console.log(globalStats);
 
   if (isFetching) return "Loading...";
 
